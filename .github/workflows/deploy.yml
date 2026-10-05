@@ -7,6 +7,8 @@ on:
   # schedule:
   #   - cron: '0 3 * * *'
 
+  workflow_dispatch:
+  
   repository_dispatch:
     types: [trigger-workflow]
 
@@ -16,10 +18,11 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  HASH_FILE: build_hash
-  SOURCE_REPO: innei-dev/Yohaku
-  BUILD_COMMAND: pnpm --filter @yohaku/web build:ci
-  STANDALONE_SUBPATH: standalone/apps/web
+  HASH_FILE: ${{ secrets.HASH_FILE || '.github/deploy_build_hash' }}
+  SOURCE_REPO: ${{ secrets.SOURCE_REPO || 'innei-dev/Yohaku' }}
+  BUILD_COMMAND: ${{ secrets.BUILD_COMMAND || 'pnpm --filter @yohaku/web build:ci' }}
+  STANDALONE_SUBPATH: ${{ secrets.STANDALONE_SUBPATH || 'standalone/apps/web' }}
+  BASE_DIR: ${{ secrets.BASE_DIR || '$HOME/yohaku' }}
 
 jobs:
   prepare:
@@ -36,7 +39,7 @@ jobs:
       - name: Read HASH_FILE content
         id: read_hash
         run: |
-          content=$(cat ${{ env.HASH_FILE }}) || true
+          content=$(cat "$HASH_FILE") || true
           echo "hash_content=$content" >> "$GITHUB_OUTPUT"
   check:
     name: Check Should Rebuild
@@ -48,8 +51,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: innei-dev/Yohaku
-          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+          repository: ${{ env.SOURCE_REPO || 'innei-dev/Yohaku'}}
+          token: ${{ secrets.GH_PAT }}
           fetch-depth: 0
           lfs: true
           submodules: recursive
@@ -85,8 +88,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: ${{ env.SOURCE_REPO }}
-          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+          repository: ${{ env.SOURCE_REPO || 'innei-dev/Yohaku' }}
+          token: ${{ secrets.GH_PAT }}
           fetch-depth: 0
           lfs: true
           submodules: recursive
@@ -100,6 +103,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
+          token: ${{ secrets.GH_PAT }}
       - uses: jongwooo/next-cache@v1
       - name: Install dependencies
         run: pnpm install
@@ -108,8 +112,31 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
           NEXT_PUBLIC_GATEWAY_URL: ${{ secrets.NEXT_PUBLIC_GATEWAY_URL }}
+          BUILD_RATE_LIMIT_RETRIES: ${{ secrets.BUILD_RATE_LIMIT_RETRIES || '3' }}
+          BUILD_RATE_LIMIT_DELAY: ${{ secrets.BUILD_RATE_LIMIT_DELAY || '60' }}
         run: |
-          ${{ env.BUILD_COMMAND }}
+          set -euo pipefail
+          case "$BUILD_RATE_LIMIT_RETRIES:$BUILD_RATE_LIMIT_DELAY" in
+            *[!0-9:]* | :* | *:) echo '构建重试次数和等待秒数必须是非负整数' >&2; exit 1 ;;
+          esac
+          attempt=0
+          while true; do
+            attempt=$((attempt + 1))
+            build_log="$RUNNER_TEMP/yohaku-build.log"
+            if bash -c "$BUILD_COMMAND" 2>&1 | tee "$build_log"; then
+              break
+            else
+              build_status=${PIPESTATUS[0]}
+            fi
+            if ! grep -Eq '429|RATE_LIMITED|Too many requests' "$build_log" \
+              || [ "$attempt" -gt "$BUILD_RATE_LIMIT_RETRIES" ]; then
+              exit "$build_status"
+            fi
+            delay=$((BUILD_RATE_LIMIT_DELAY))
+            echo "构建触发 API 限流，${delay} 秒后进行第 $((attempt + 1)) 次尝试"
+            echo "Build trigger API rate limited, retrying attempt $((attempt + 1)) in ${delay} seconds"
+            sleep "$delay"
+          done
           cd apps/web/.next
           rm -rf cache
           cp -r ../public ./standalone/public
@@ -147,6 +174,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       # - name: Download artifact
       #   uses: actions/download-artifact@v4
       #   with:
@@ -163,77 +193,145 @@ jobs:
         run: mv assets/release.zip release.zip
 
       - name: Prepare standalone PM2 config
-        run: cp ${{ github.workspace }}/pm2/ecosystem.config.js ./ecosystem.config.js
+        run: cp pm2/ecosystem.config.js ecosystem.config.js
 
-
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASSWORD }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          source: 'release.zip'
-          target: '/tmp/yohaku'
-
-      - name: copy PM2 config via ssh password
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASSWORD }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          source: 'ecosystem.config.js'
-          target: '/tmp/yohaku'
-
-      - name: Exec deploy script with SSH
-        uses: appleboy/ssh-action@master
-
-        with:
-          command_timeout: 5m
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASSWORD }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            set -e
-            source $HOME/.bashrc
-            basedir=$HOME/yohaku
-            workdir=$basedir/${{ github.run_number }}
-            mkdir -p $workdir
-            mkdir -p $basedir/.cache
-            mv /tmp/yohaku/release.zip $workdir/release.zip
-            install -m 644 /tmp/yohaku/ecosystem.config.js $basedir/ecosystem.config.js
-            cd $workdir
-            unzip -qq -o $workdir/release.zip
-            rm -r /tmp/yohaku
-            rm -rf $workdir/${{ env.STANDALONE_SUBPATH }}/.env
-            ln -s $HOME/yohaku/.env $workdir/${{ env.STANDALONE_SUBPATH }}/.env
-            export NEXT_SHARP_PATH=$(npm root -g)/sharp
-            # https://github.com/Unitech/pm2/issues/3054
-            # symlink workdir node entry file to basedir
-            ln -sf $workdir/${{ env.STANDALONE_SUBPATH }}/server.js $basedir/server.js
-            mkdir -p $workdir/${{ env.STANDALONE_SUBPATH }}/.next
-            rm -rf $workdir/${{ env.STANDALONE_SUBPATH }}/.next/cache
-            ln -sf $basedir/.cache $workdir/${{ env.STANDALONE_SUBPATH }}/.next/cache
-            cd $basedir
-            if pm2 describe Yohaku >/dev/null 2>&1; then
-              pm2 reload ecosystem.config.js --update-env
-            else
-              pm2 start ecosystem.config.js --update-env
-            fi
-            rm $workdir/release.zip
-            pm2 save
-            echo "Deployed successfully"
-
-      - name: After deploy script
+      - name: Establish SSH Connection and Pre-deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SSH_PASSWORD: ${{ secrets.PASSWORD }}
+          SSH_PROXY: ${{ secrets.SSH_PROXY }}
+          SSH_HOST: ${{ secrets.HOST }}
+          SSH_USER: ${{ secrets.USER }}
+          SSH_PORT: ${{ secrets.PORT }}
+          CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+          CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
         run: |
-          hash=${{ needs.build.outputs.sha_short }}
-          # curl -X "POST" "https://mx.innei.in/api/v2/fn/shiro/new-version-hook" -H 'Content-Type: application/json' -d "{\"hash\": \"$hash\", \"key\": \"\"}"
-          ${{ secrets.AFTER_DEPLOY_SCRIPT }}
+          set -euo pipefail
+          case "$SSH_PROXY" in
+            '') ;;
+            cloudflared)
+              if [ -z "$CF_ACCESS_CLIENT_ID" ] || [ -z "$CF_ACCESS_CLIENT_SECRET" ]; then
+                echo 'cloudflared 代理需要配置 CF_ACCESS_CLIENT_ID 和 CF_ACCESS_CLIENT_SECRET' >&2
+                echo 'cloudflared proxy requires CF_ACCESS_CLIENT_ID and CF_ACCESS_CLIENT_SECRET to be configured' >&2
+                exit 1
+              fi
+              curl -fsSL -o /tmp/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+              sudo install -m 755 /tmp/cloudflared /usr/local/bin/cloudflared
+              cloudflared --version
+              ;;
+            *) echo "Unsupported SSH_PROXY: $SSH_PROXY" >&2
+               echo "不支持的 SSH_PROXY: $SSH_PROXY" >&2
+               exit 1 ;;
+          esac
+          ssh_auth=()
+          if [ -n "$SSH_PASSWORD" ]; then
+            sudo apt-get update
+            sudo apt-get install --yes sshpass
+            export SSHPASS="$SSH_PASSWORD"
+            ssh_auth=(sshpass -e)
+          fi
+          install -d -m 700 "$HOME/.ssh"
+          if [ -n "$SSH_PRIVATE_KEY" ]; then
+            printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/deploy_key"
+            chmod 600 "$HOME/.ssh/deploy_key"
+          fi
+          {
+            printf 'Host deployment-target\n  HostName %s\n  User %s\n  Port %s\n  StrictHostKeyChecking accept-new\n' "$SSH_HOST" "$SSH_USER" "${SSH_PORT:-22}"
+            if [ -n "$SSH_PRIVATE_KEY" ]; then
+              printf '  IdentityFile %s/.ssh/deploy_key\n  IdentitiesOnly yes\n' "$HOME"
+            fi
+            case "$SSH_PROXY" in
+              cloudflared)
+                printf '  ProxyCommand cloudflared access ssh --hostname %%h --service-token-id %s --service-token-secret %s\n' "$CF_ACCESS_CLIENT_ID" "$CF_ACCESS_CLIENT_SECRET"
+                ;;
+            esac
+          } > "$HOME/.ssh/config"
+          chmod 600 "$HOME/.ssh/config"
+          "${ssh_auth[@]}" ssh -o ConnectTimeout=30 deployment-target 'mkdir -p /tmp/yohaku'
+          "${ssh_auth[@]}" scp release.zip ecosystem.config.js deployment-target:/tmp/yohaku/
+
+      - name: Build and Deploy
+        env:
+          SSHPASS: ${{ secrets.PASSWORD }}
+          BUILD_RETENTION_COUNT: ${{ secrets.BUILD_RETENTION_COUNT }}
+        run: |
+          set -euo pipefail
+          ssh_auth=()
+          if [ -n "$SSHPASS" ]; then ssh_auth=(sshpass -e); fi
+          case "$BUILD_RETENTION_COUNT" in
+            '' ) ;;
+            *[!0-9]* | 0) echo 'BUILD_RETENTION_COUNT must be empty or a positive integer' >&2
+               echo 'BUILD_RETENTION_COUNT 必须为空或正整数' >&2
+               exit 1 ;;
+          esac
+          base_dir_b64=$(printf '%s' "$BASE_DIR" | base64 -w0)
+          "${ssh_auth[@]}" ssh -o ConnectTimeout=30 deployment-target "bash -s -- '$BUILD_RETENTION_COUNT' '$base_dir_b64'" <<'EOF'
+          set -e
+          retention_input=$1
+          basedir=$(printf '%s' "$2" | base64 -d)
+          if [ "$basedir" = '$HOME/yohaku' ]; then basedir="$HOME/yohaku"; fi
+          case "$basedir" in
+            /*) ;;
+            *) echo 'BASE_DIR 必须是服务器上的绝对路径' >&2; exit 1 ;;
+          esac
+          basedir=$(realpath -m -- "$basedir")
+          if [ "$basedir" = / ]; then echo 'BASE_DIR 不能是根目录' >&2; exit 1; fi
+          if [ -n "$retention_input" ]; then
+            retention=$((10#$retention_input))
+          else
+            retention=0
+          fi
+          source $HOME/.bashrc
+          workdir="$basedir/build_${{ github.run_number }}_$(date +%Y%m%d_%H%M%S)"
+          mkdir -p "$workdir" "$basedir/.cache"
+          mv /tmp/yohaku/release.zip "$workdir/release.zip"
+          install -m 644 /tmp/yohaku/ecosystem.config.js "$basedir/ecosystem.config.js"
+          cd "$workdir"
+          unzip -qq -o "$workdir/release.zip"
+          rm -r /tmp/yohaku
+          rm -rf "$workdir/${{ env.STANDALONE_SUBPATH }}/.env"
+          ln -s "$basedir/.env" "$workdir/${{ env.STANDALONE_SUBPATH }}/.env"
+          export NEXT_SHARP_PATH=$(npm root -g)/sharp
+          # https://github.com/Unitech/pm2/issues/3054
+          # 将工作目录的 Node 入口文件软链接到基础目录
+          ln -sf "$workdir/${{ env.STANDALONE_SUBPATH }}/server.js" "$basedir/server.js"
+          mkdir -p "$workdir/${{ env.STANDALONE_SUBPATH }}/.next"
+          rm -rf "$workdir/${{ env.STANDALONE_SUBPATH }}/.next/cache"
+          ln -sf "$basedir/.cache" "$workdir/${{ env.STANDALONE_SUBPATH }}/.next/cache"
+          cd "$basedir"
+          if [ ! -f "$basedir/.env" ]; then
+            echo "缺少运行环境配置: $basedir/.env" >&2
+          exit 1
+          fi
+          set -a; source "$basedir/.env"; set +a
+          if pm2 describe Yohaku >/dev/null 2>&1; then
+            pm2 reload ecosystem.config.js --update-env
+          else
+            pm2 start ecosystem.config.js --update-env
+          fi
+          rm "$workdir/release.zip"
+          pm2 save
+          if [ "$retention" -gt 0 ]; then
+            retained=1
+            while IFS= read -r build_dir; do
+              [ "$basedir/$build_dir" = "$workdir" ] && continue
+              if [ "$retained" -lt "$retention" ]; then
+                retained=$((retained + 1))
+              else
+                rm -rf -- "$basedir/$build_dir"
+              fi
+            done < <(find "$basedir" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' \
+              | awk '/^[0-9]+(_[0-9]{8}_[0-9]{6})?$/' \
+              | sort -t_ -k1,1nr -k2,2r -k3,3r)
+          fi
+          echo "SUCCESS 部署成功"
+          EOF
+
+      # - name: After deploy script
+      #   run: |
+      #     hash=${{ needs.build.outputs.sha_short }}
+      #     # curl -X "POST" "https://mx.innei.in/api/v2/fn/shiro/new-version-hook" -H 'Content-Type: application/json' -d "{\"hash\": \"$hash\", \"key\": \"\"}"
+      #     ${{ secrets.AFTER_DEPLOY_SCRIPT }}
   store:
     name: Store artifact commit version
     runs-on: ubuntu-latest
@@ -256,15 +354,20 @@ jobs:
         env:
           SHA_SHORT: ${{ needs.build.outputs.sha_short }}
 
-        run: echo $SHA_SHORT > ${{ env.HASH_FILE }}
+        run: echo "$SHA_SHORT" > "$HASH_FILE"
       - name: Commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add ${{ env.HASH_FILE }}
+          git add -- "$HASH_FILE"
+          if git diff --cached --quiet; then
+            echo "Hash file unchanged, skip commit."
+            exit 0
+          fi
           git commit -a -m "Update hash file"
       - name: Push changes
+        if: ${{ !env.ACT }}
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

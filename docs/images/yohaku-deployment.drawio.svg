@@ -1,0 +1,511 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" style="background: transparent; background-color: transparent; color-scheme: light dark;" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1038px" height="922px" viewBox="-0.5 -0.5 1038 922" content="&lt;mxfile&gt;&lt;diagram id=&quot;yohaku-deployment&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <g>
+            <rect x="123" y="1" width="480" height="190" rx="13.3" ry="13.3" fill="#f6f8fc" stroke="#a8b7cd" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(246, 248, 252), rgb(22, 24, 28)); stroke: light-dark(rgb(168, 183, 205), rgb(70, 83, 102));"/>
+        </g>
+        <g>
+            <rect x="123" y="310" width="400" height="611" rx="28" ry="28" fill="#f6f8fc" stroke="#a8b7cd" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(246, 248, 252), rgb(22, 24, 28)); stroke: light-dark(rgb(168, 183, 205), rgb(70, 83, 102));"/>
+        </g>
+        <g>
+            <rect x="653" y="306" width="340" height="140" rx="9.8" ry="9.8" fill="none" stroke="none" pointer-events="all"/>
+            <path d="M 655.71 308.15 C 655.71 308.15 655.71 308.15 655.71 308.15 M 655.71 308.15 C 655.71 308.15 655.71 308.15 655.71 308.15 M 656.5 319.44 C 659.89 318.15 659.97 314.33 665.68 308.87 M 656.5 319.44 C 660.18 315.25 661.19 312.18 665.68 308.87 M 656.63 331.48 C 666.14 321.92 670.69 310.71 676.31 308.84 M 656.63 331.48 C 662.81 322.79 672.07 315.5 676.31 308.84 M 656.76 343.52 C 664.41 335.87 675.99 327.25 686.94 308.8 M 656.76 343.52 C 665.63 331.18 674.04 322.24 686.94 308.8 M 656.9 355.56 C 666.33 346.11 681.34 329.63 697.57 308.77 M 656.9 355.56 C 667.22 344.95 675.73 336.23 697.57 308.77 M 657.03 367.6 C 671.56 355.15 680.57 334.2 708.2 308.73 M 657.03 367.6 C 675.62 346.36 692.24 325.07 708.2 308.73 M 656.51 380.4 C 665.28 363.6 683.84 348.76 718.83 308.7 M 656.51 380.4 C 670.21 365.42 683.19 348.09 718.83 308.7 M 656.64 392.44 C 686.27 357.55 712.6 325.51 729.46 308.67 M 656.64 392.44 C 674.37 371.56 697.5 347.4 729.46 308.67 M 656.77 404.48 C 686.83 373.35 713.55 335.02 740.09 308.63 M 656.77 404.48 C 681.2 373.99 711.19 341.37 740.09 308.63 M 656.91 416.52 C 687.72 385.67 715.72 349.3 750.72 308.6 M 656.91 416.52 C 684.22 385.09 712.89 350.11 750.72 308.6 M 657.04 428.56 C 686.8 397.58 713.5 358.18 761.35 308.56 M 657.04 428.56 C 686.89 399.63 714.75 365.2 761.35 308.56 M 657.83 439.85 C 704.95 389.95 750.8 333.19 771.98 308.53 M 657.83 439.85 C 692.03 397.45 729.13 353.71 771.98 308.53 M 661.24 448.11 C 705.69 397.91 740.69 348.91 781.96 309.25 M 661.24 448.11 C 694.12 417.26 721.81 380.4 781.96 309.25 M 671.87 448.08 C 707.52 406.87 741.08 372.8 792.59 309.21 M 671.87 448.08 C 710.82 405.33 748.88 358.84 792.59 309.21 M 682.5 448.04 C 714.08 401.75 754.25 364.63 803.22 309.18 M 682.5 448.04 C 729.57 396.55 774.76 348.09 803.22 309.18 M 693.13 448.01 C 736.12 397.37 782.84 348.16 813.85 309.14 M 693.13 448.01 C 724.79 413.02 753.38 379.01 813.85 309.14 M 703.76 447.98 C 737.51 407.19 773 364.78 824.48 309.11 M 703.76 447.98 C 735.64 417.42 765.73 381.74 824.48 309.11 M 714.39 447.94 C 735.92 417.78 765.79 384.03 835.11 309.07 M 714.39 447.94 C 751.46 402.98 790.31 363.23 835.11 309.07 M 725.02 447.91 C 761.08 404.15 793.85 366.55 845.74 309.04 M 725.02 447.91 C 772.58 389.92 821.65 336.25 845.74 309.04 M 735.65 447.87 C 762.32 416.8 799.07 374.32 856.37 309.01 M 735.65 447.87 C 758.95 414.31 784.26 388.12 856.37 309.01 M 746.28 447.84 C 792.14 390.87 835.3 336.55 867 308.97 M 746.28 447.84 C 774.2 410.02 806.96 372.31 867 308.97 M 756.91 447.8 C 785.32 406.36 817.2 376.38 877.63 308.94 M 756.91 447.8 C 782.79 416.19 808.34 386.06 877.63 308.94 M 767.54 447.77 C 803.85 404.25 848.66 352.47 888.26 308.9 M 767.54 447.77 C 815.92 393.97 861.25 341.27 888.26 308.9 M 777.52 448.49 C 826.43 393.74 878.06 339.92 898.89 308.87 M 777.52 448.49 C 808.37 415.58 838.21 383.82 898.89 308.87 M 788.15 448.45 C 817.68 414.13 849.24 378.06 909.52 308.83 M 788.15 448.45 C 832.24 395.81 879.54 344.15 909.52 308.83 M 798.78 448.42 C 825.24 416.28 851.5 385.91 920.15 308.8 M 798.78 448.42 C 841.04 405.58 881.94 356.02 920.15 308.8 M 809.41 448.39 C 838.56 415.3 874.39 379.65 930.12 309.52 M 809.41 448.39 C 856.45 393.73 903.82 336.85 930.12 309.52 M 820.04 448.35 C 858.29 404.62 897.25 357.54 940.75 309.48 M 820.04 448.35 C 850.42 415.5 880.45 378.24 940.75 309.48 M 830.67 448.32 C 857.24 414.53 891.38 379.06 951.38 309.45 M 830.67 448.32 C 869.95 402.82 906.13 359.37 951.38 309.45 M 841.3 448.28 C 866.44 411.03 901.74 383.52 962.01 309.42 M 841.3 448.28 C 871.08 414.42 901.41 378.69 962.01 309.42 M 851.93 448.25 C 892.3 404.44 934.01 357.81 972.64 309.38 M 851.93 448.25 C 883.73 409.24 920.14 369.31 972.64 309.38 M 862.56 448.21 C 908.87 400.16 949.24 355.06 983.27 309.35 M 862.56 448.21 C 899.02 405.35 933.72 365.17 983.27 309.35 M 873.19 448.18 C 901.53 418.13 926.14 386.46 992.59 310.82 M 873.19 448.18 C 916.39 395.2 959.55 345.65 992.59 310.82 M 883.82 448.14 C 927.02 404.58 962.42 358.58 996.66 318.33 M 883.82 448.14 C 911.62 414.13 942.6 379.36 996.66 318.33 M 894.45 448.11 C 940.5 398.38 978.87 358.37 996.14 331.13 M 894.45 448.11 C 927.88 406.12 959.49 368.5 996.14 331.13 M 905.08 448.08 C 924.4 423.93 946.08 407.24 996.27 343.17 M 905.08 448.08 C 930.41 417.36 961.51 384.2 996.27 343.17 M 915.71 448.04 C 940.24 413.04 971.93 382.84 996.4 355.21 M 915.71 448.04 C 936.94 422.27 958.64 396.73 996.4 355.21 M 925.68 448.76 C 948.38 425.72 967.75 408.79 995.88 368.01 M 925.68 448.76 C 945.02 424.24 967.99 395.37 995.88 368.01 M 936.31 448.73 C 953.84 420.77 976.97 401.18 996.01 380.05 M 936.31 448.73 C 958.53 423.01 977.89 398.58 996.01 380.05 M 946.94 448.69 C 955.5 434.53 973.31 424.31 996.15 392.09 M 946.94 448.69 C 961.02 431.92 974.28 416.23 996.15 392.09 M 957.57 448.66 C 968.13 434.23 975.34 422.78 995.63 404.88 M 957.57 448.66 C 968.72 437.84 979.2 421.97 995.63 404.88 M 968.2 448.62 C 972.83 438.36 981.38 430.96 995.76 416.93 M 968.2 448.62 C 977.42 436.97 985.96 429.01 995.76 416.93 M 978.83 448.59 C 987.14 445.08 991.77 431.16 995.89 428.97 M 978.83 448.59 C 983.21 442.18 987.59 439.91 995.89 428.97" fill="none" stroke="#f6f8fc" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all" style="stroke: light-dark(rgb(246, 248, 252), rgb(22, 24, 28));"/>
+            <path d="M 662.8 306 C 785.45 305.86 909.97 301.45 983.2 306 M 662.8 306 C 787.36 307.83 908.22 307.56 983.2 306 M 983.2 306 C 987.29 304.72 991.84 309.57 993 315.8 M 983.2 306 C 992.73 303.98 994.24 308.26 993 315.8 M 993 315.8 C 990.41 355.84 994.01 395.29 993 436.2 M 993 315.8 C 996.73 345.71 996.01 373.3 993 436.2 M 993 436.2 C 996.89 443.86 990.68 445.62 983.2 446 M 993 436.2 C 994.05 438.88 986.77 448.43 983.2 446 M 983.2 446 C 881.38 443.04 775.15 442.22 662.8 446 M 983.2 446 C 907.34 450.39 833.75 448.33 662.8 446 M 662.8 446 C 654.97 443.41 651.91 446.04 653 436.2 M 662.8 446 C 660.4 442.57 656.8 438.47 653 436.2 M 653 436.2 C 656.23 396.63 651.03 368.1 653 315.8 M 653 436.2 C 652.98 402.13 652.86 369.63 653 315.8 M 653 315.8 C 652.33 309.8 655.36 308.04 662.8 306 M 653 315.8 C 649.03 310.71 654.73 301.69 662.8 306" fill="none" stroke="#a8b7cd" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="24 24" pointer-events="all" style="stroke: light-dark(rgb(168, 183, 205), rgb(70, 83, 102));"/>
+        </g>
+        <g>
+            <rect x="654" y="528" width="340" height="393" rx="23.8" ry="23.8" fill="#f6f8fc" stroke="#a8b7cd" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(246, 248, 252), rgb(22, 24, 28)); stroke: light-dark(rgb(168, 183, 205), rgb(70, 83, 102));"/>
+        </g>
+        <g>
+            <rect x="148" y="16" width="180" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 178px; height: 1px; padding-top: 31px; margin-left: 150px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #283b55; ">
+                                <div style="display: inline-block; font-size: 19px; font-family: &quot;Arial&quot;; color: light-dark(#283b55, #adbed4); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                    <b>
+                                        GitHub 仓库
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="150" y="37" fill="#283b55" font-family="&quot;Arial&quot;" font-size="19px" font-weight="bold">
+                        GitHub 仓库
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="148" y="325" width="260" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 258px; height: 1px; padding-top: 340px; margin-left: 150px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #283b55; ">
+                                <div style="display: inline-block; font-size: 19px; font-family: &quot;Arial&quot;; color: light-dark(#283b55, #adbed4); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                    <b>
+                                        GitHub Actions Runner
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="150" y="346" fill="#283b55" font-family="&quot;Arial&quot;" font-size="19px" font-weight="bold">
+                        GitHub Actions Runner
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="678" y="321" width="220" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 218px; height: 1px; padding-top: 336px; margin-left: 680px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #283b55; ">
+                                <div style="display: inline-block; font-size: 19px; font-family: &quot;Arial&quot;; color: light-dark(#283b55, #adbed4); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                    SSH代理
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="680" y="342" fill="#283b55" font-family="&quot;Arial&quot;" font-size="19px" font-weight="bold">
+                        SSH代理
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="679" y="543" width="180" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 178px; height: 1px; padding-top: 558px; margin-left: 681px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #283b55; ">
+                                <div style="display: inline-block; font-size: 19px; font-family: &quot;Arial&quot;; color: light-dark(#283b55, #adbed4); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                    <b>
+                                        私有服务器
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="681" y="564" fill="#283b55" font-family="&quot;Arial&quot;" font-size="19px" font-weight="bold">
+                        私有服务器
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="153" y="76" width="190" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 192px; height: 1px; padding-top: 108px; margin-left: 152px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        Yohaku 源码仓库
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        私有
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="248" y="113" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        Yohaku 源码仓库...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="368" y="76" width="210" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 212px; height: 1px; padding-top: 108px; margin-left: 367px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        Yohaku-Deploy-Action
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        工作流仓库
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="473" y="113" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        Yohaku-Deploy-Action...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="168" y="375" width="290" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 292px; height: 1px; padding-top: 407px; margin-left: 167px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        prepare
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        读取已部署版本
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="313" y="412" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        prepare...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="168" y="480" width="290" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 292px; height: 1px; padding-top: 512px; margin-left: 167px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        check
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        对比源码版本
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="313" y="517" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        check...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="168" y="585" width="290" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 292px; height: 1px; padding-top: 617px; margin-left: 167px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        build
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        构建并打包
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="313" y="622" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        build...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="168" y="690" width="290" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 292px; height: 1px; padding-top: 722px; margin-left: 167px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        deploy
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        上传并部署
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="313" y="727" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        deploy...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="168" y="795" width="290" height="64" rx="8.96" ry="8.96" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 292px; height: 1px; padding-top: 827px; margin-left: 167px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        store
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        回写版本到工作流仓库
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="313" y="832" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        store...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="708" y="368" width="230" height="60" rx="8.4" ry="8.4" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 232px; height: 1px; padding-top: 398px; margin-left: 707px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        SSH 隧道
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        Service Token &amp; private key
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="823" y="403" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        SSH 隧道...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="709" y="598" width="230" height="60" rx="8.4" ry="8.4" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 232px; height: 1px; padding-top: 628px; margin-left: 708px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        Nginx 反向代理
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="824" y="633" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        Nginx 反向代理
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="709" y="698" width="230" height="60" rx="8.4" ry="8.4" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 232px; height: 1px; padding-top: 728px; margin-left: 708px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        mx-space/core
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        /api/v3/*
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="824" y="733" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        mx-space/core...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="709" y="808" width="230" height="60" rx="8.4" ry="8.4" fill="#ffffff" stroke="#7188aa" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(113, 136, 170), rgb(104, 124, 153));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 232px; height: 1px; padding-top: 838px; margin-left: 708px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #24364e; ">
+                                <div style="display: inline-block; font-size: 17px; font-family: &quot;Arial&quot;; color: light-dark(#24364e, #b3c2d7); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <div style="font-size: 17px; font-weight: 600; color: light-dark(rgb(36, 54, 78), rgb(179, 194, 215));">
+                                        PM2 · Yohaku
+                                    </div>
+                                    <div style="font-size: 15px; color: light-dark(rgb(69, 90, 117), rgb(146, 164, 187)); margin-top: 5px;">
+                                        Next.js standalone
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="824" y="843" fill="#24364e" font-family="&quot;Arial&quot;" font-size="17px" text-anchor="middle">
+                        PM2 · Yohaku...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <path d="M 467.96 140 L 467.99 201 Q 468 211 458 211 L 323 211 Q 313 211 313 221 L 313 363.7" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 313 372.2 L 308.75 363.7 L 317.25 363.7 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 262.25 143.52 L 262.29 206 Q 262.3 216 252.3 216 L 18 216 Q 8 216 8 226 L 8 506.9 Q 8 516.9 18 516.9 L 155.55 516.93" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" stroke-dasharray="17.5 15" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 164.05 516.93 L 155.54 521.18 L 155.55 512.68 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 263.01 140 L 263 206 Q 263 216 253 216 L 18 216 Q 8 216 8 226 L 8 607 Q 8 617 18 617 L 156.71 617" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" stroke-dasharray="17.5 15" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 165.21 617 L 156.71 621.25 L 156.71 612.75 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 313 439 L 313 468.7" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 313 477.2 L 308.75 468.7 L 317.25 468.7 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 313 544 L 313 573.7" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 313 582.2 L 308.75 573.7 L 317.25 573.7 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 313 649 L 313 678.7" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 313 687.2 L 308.75 678.7 L 317.25 678.7 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 313 754 L 313 783.7" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 313 792.2 L 308.75 783.7 L 317.25 783.7 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 458 616 L 573 616 Q 583 616 583 614 L 583 613 Q 583 612 593 612 L 697.7 612" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" stroke-dasharray="17.5 15" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 706.2 612 L 697.7 616.25 L 697.7 607.75 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 458 722 L 578 722 Q 588 722 588 712 L 588 408 Q 588 398 598 398 L 696.7 398" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 705.2 398 L 696.7 402.25 L 696.7 393.75 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 938 398 L 1018 398 Q 1028 398 1028 408 L 1028 828 Q 1028 838 1018 838 L 950.3 838" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 941.8 838 L 950.3 833.75 L 950.3 842.25 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 824 658 L 824 686.7" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 824 695.2 L 819.75 686.7 L 828.25 686.7 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <path d="M 709 643 L 689 643 Q 679 643 679 653 L 679 828 Q 679 838 688.35 838 L 697.7 838" fill="none" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+            <path d="M 706.2 838 L 697.7 842.25 L 697.7 833.75 Z" fill="#52657e" stroke="#52657e" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(82, 101, 126), rgb(137, 154, 175)); stroke: light-dark(rgb(82, 101, 126), rgb(137, 154, 175));"/>
+        </g>
+        <g>
+            <rect x="53" y="481" width="100" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 98px; height: 1px; padding-top: 496px; margin-left: 55px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #455a75; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: &quot;Arial&quot;; color: light-dark(#455a75, #92a4bb); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    版本查询
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="55" y="501" fill="#455a75" font-family="&quot;Arial&quot;" font-size="15px">
+                        版本查询
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="15" y="573" width="120" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 118px; height: 1px; padding-top: 588px; margin-left: 17px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #455a75; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: &quot;Arial&quot;; color: light-dark(#455a75, #92a4bb); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    源码 checkout
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="17" y="593" fill="#455a75" font-family="&quot;Arial&quot;" font-size="15px">
+                        源码 checkout
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <rect x="473" y="585" width="130" height="30" fill="none" stroke="none" pointer-events="all"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 128px; height: 1px; padding-top: 600px; margin-left: 475px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #455a75; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: &quot;Arial&quot;; color: light-dark(#455a75, #92a4bb); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    构建期 API 请求
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="475" y="605" fill="#455a75" font-family="&quot;Arial&quot;" font-size="15px">
+                        构建期 API 请求
+                    </text>
+                </switch>
+            </g>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.drawio.com/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
